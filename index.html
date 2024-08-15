@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cute Cats Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f3f4f6;
+            text-align: center;
+            color: #333;
+        }
+
+        header {
+            background-color: #ff6f61;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+            margin: 0;
+        }
+
+        .cat-container {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 20px;
+        }
+
+        .cat-card {
+            background-color: #fff;
+            border: 2px solid #ddd;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px;
+            padding: 20px;
+            width: 250px;
+            transition: transform 0.3s ease;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .cat-image {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .cat-card:hover .cat-image {
+            transform: rotate(360deg);
+        }
+
+        h2 {
+            color: #ff6f61;
+            font-size: 24px;
+            margin-top: 10px;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        footer {
+            background-color: #ff6f61;
+            color: #fff;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        .cat-card a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .content {
+            margin: 20px auto;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        img {
+            border-radius: 10px;
+            max-width: 100%;
+        }
+
+        p {
+            font-size: 18px;
+            margin-top: 20px;
+        }
+
+        nav a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: bold;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Cute Cats Portfolio</h1>
+    </header>
+
+    <!-- Main Portfolio Section -->
+    <section class="cat-container page active" id="home">
+        <div class="cat-card">
+            <a href="#fluffy" onclick="showPage('fluffy')">
+                <img src="lala.jpg" alt="Fluffy the Cat" class="cat-image">
+                <h2>Fluffy</h2>
+                <p>Special Trick: Backflip</p>
+            </a>
+        </div>
+        <div class="cat-card">
+            <a href="#whiskers" onclick="showPage('whiskers')">
+                <img src="oops.jpg" alt="Whiskers the Cat" class="cat-image">
+                <h2>Whiskers</h2>
+                <p>Special Trick: High Five</p>
+            </a>
+        </div>
+        <div class="cat-card">
+            <a href="#shadow" onclick="showPage('shadow')">
+                <img src="yeahh.jpg" alt="Shadow the Cat" class="cat-image">
+                <h2>Shadow</h2>
+                <p>Special Trick: Hide and Seek</p>
+            </a>
+        </div>
+        <div class="cat-card">
+            <a href="#bella" onclick="showPage('bella')">
+                <img src="huhh.jpg" alt="Bella the Cat" class="cat-image">
+                <h2>Bella</h2>
+                <p>Special Trick: Jumping Through Hoops</p>
+            </a>
+        </div>
+        <div class="cat-card">
+            <a href="#tiger" onclick="showPage('tiger')">
+                <img src="aww.jpg" alt="Tiger the Cat" class="cat-image">
+                <h2>Tiger</h2>
+                <p>Special Trick: Climbing Trees</p>
+            </a>
+        </div>
+    </section>
+
+    <!-- Fluffy's Page -->
+    <section class="page" id="fluffy">
+        <header>
+            <h1>Fluffy's Abilities</h1>
+            <nav>
+                <a href="#home" onclick="showPage('home')">Back to Home</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="lala.jpg" alt="Fluffy the Cat">
+            <p>Fluffy is a master of the backflip! She performs this trick with grace and precision, impressing everyone who sees it.</p>
+        </div>
+    </section>
+
+    <!-- Whiskers' Page -->
+    <section class="page" id="whiskers">
+        <header>
+            <h1>Whiskers' Abilities</h1>
+            <nav>
+                <a href="#home" onclick="showPage('home')">Back to Home</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="oops.jpg" alt="Whiskers the Cat">
+            <p>Whiskers loves to high-five! He's always ready to greet you with a friendly paw.</p>
+        </div>
+    </section>
+
+    <!-- Shadow's Page -->
+    <section class="page" id="shadow">
+        <header>
+            <h1>Shadow's Abilities</h1>
+            <nav>
+                <a href="#home" onclick="showPage('home')">Back to Home</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="yeahh.jpg" alt="Shadow the Cat">
+            <p>Shadow excels at hide and seek. You'll never find a better hider than Shadow!</p>
+        </div>
+    </section>
+
+    <!-- Bella's Page -->
+    <section class="page" id="bella">
+        <header>
+            <h1>Bella's Abilities</h1>
+            <nav>
+                <a href="#home" onclick="showPage('home')">Back to Home</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="huhh.jpg" alt="Bella the Cat">
+            <p>Bella is a pro at jumping through hoops. She loves showing off her agility!</p>
+        </div>
+    </section>
+
+    <!-- Tiger's Page -->
+    <section class="page" id="tiger">
+        <header>
+            <h1>Tiger's Abilities</h1>
+            <nav>
+                <a href="#home" onclick="showPage('home')">Back to Home</a>
+            </nav>
+        </header>
+        <div class="content">
+            <img src="aww.jpg" alt="Tiger the Cat">
+            <p>Tiger is an expert at climbing trees. He's always at the top, surveying his domain.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Cute Cats Portfolio</p>
+    </footer>
+
+    <script>
+        function showPage(pageId) {
+            // Hide all pages
+            var pages = document.querySelectorAll('.page');
+            pages.forEach(function(page) {
+                page.classList.remove('active');
+            });
+
+            // Show the selected page
+            document.getElementById(pageId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
